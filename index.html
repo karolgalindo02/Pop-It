@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+    <title>Pop It!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/square.png" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;500;900&display=swap" 
+	rel="stylesheet"
+	>
+</head>
+<body>
+	
+  <header class="header">
+	<div class="menu__wrapper">
+        <nav class="menu__bar">
+          <a class="logo" href="#" title="Logo">
+            PopIt.com
+          </a>
+          <img
+            class="menu-icon"
+            src="img/burger-menu.svg"
+            title="Burger Menu"
+            alt="Burger Menu"
+            onclick="toggleMenu(this)"
+          />
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a href="#" title="Inicio" class="navigation__link"> Inicio </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" title="Acerca" class="navigation__link"> Acerca </a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" title="Contacto" class="navigation__link"> Contacto </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="header__content">
+      <div class="header__content__information">
+        <h2 class="header__content__title">POP IT!</h2>
+        <p class="header__content_p">
+		¡Descubre la tienda de Pop It, donde la diversión<br/>
+		y el alivio se encuentran en cada burbuja!
+        </p>
+        <button class="header__content__button">
+          Descubre
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main__container">
+      <section class="main__container__section_1">
+          <h3 class="main__container__section__title_1">¿Que es Pop It?</h3>
+          <p class="main__container__section__p">
+            Pop It es un juguete fascinante y colorido que ha conquistado los corazones de niños de todas las edades. 
+			Una lámina mágica llena de burbujas que puedes presionar y hacer "pop" una y otra vez. 
+			¡Animate a probar!
+          </p>
+      </section>
+      <section class="main__container__section_2">
+        <h3 class="main__container__section__title_1">¡Elige tu Pop-It!</h3>
+		<div id="pop-it-section">
+			<div id="carousel">
+			  <div  class="carousel__product">
+				<img src="img/square.png" alt="square" class="carousel__product__img">
+				  <span class="carousel__product__text">Pop it multicolor</span>
+				  <button class="carousel__product__button">Comprar</button>
+			  </div>
+			  <div class="carousel__product">
+				<img src="img/amongus.png" alt="among us" class="carousel__product__img">		
+				  <span class="carousel__product__text">Pop it Among Us</span>
+				  <button class="carousel__product__button">Comprar</button>
+			  </div>
+			  <div class="carousel__product">
+				<img src="img/round.png" alt="round" class="carousel__product__img">
+				  <span class="carousel__product__text">Pop it multicolor</span>
+				  <button class="carousel__product__button">Comprar</button>
+			  </div>
+			</div>
+		</div>
+      </section>
+
+      <section class="main__container__section_3">
+        <div class="main__container__section_3_content">
+          <h3 class="main__container__section__title_2" >Reglas de Juego</h3>
+          <p class="main__container__section__p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+            laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="main__container__section_3_image">
+          <img src="img/photo.jpg" alt="photo" class="main__container__section_3_img">
+        </div>
+      </section>
+  </main>
+
+  <footer class="footer">
+    <ul class="footer__option__list">
+      <li class="footer__option__item"><a href="" class="footer__option__item__link first">PopIt.com</a></li>
+      <li class="footer__option__item"><a href="" class="footer__option__item__link">Metodos de Pago</a></li>
+      <li class="footer__option__item"><a href="" class="footer__option__item__link">Descuentos</a></li>
+      <li class="footer__option__item"><a href="" class="footer__option__item__link">Contacto</a></li>
+      <li class="footer__option__item"><a href="" class="footer__option__item__link">Politica de privacidad</a></li>
+    </ul>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
