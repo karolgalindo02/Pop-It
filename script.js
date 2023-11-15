@@ -2,49 +2,36 @@
 const toggleMenu = () => {
     // Seleccionar elementos DOM relevantes
     const navigation = document.querySelector('.navigation');
-    const burgerMenu = document.querySelector(".menu-icon");
+    const burgerMenu = document.querySelector(".menu__bar__icon");
 
     // Obtener el atributo 'src' del elemento burgerMenu
     const src = burgerMenu.getAttribute('src');
     // Determinar si el icono actual es el de un burger o cerrar
     const isBurger = src === 'img/burger-menu.svg';
-    // Definir el nombre del icono según el estado
     const iconName = isBurger ? 'img/close.svg' : 'img/burger-menu.svg';
-
-    // Cambiar el atributo 'src' del burgerMenu
     burgerMenu.setAttribute('src', iconName);
 
-    // Realizar las animaciones y cambios en la clase de la navegación
+    // Animacion y cambios en la clase de navegación
     if (!isBurger) {
-        navigation.classList.add("navigation--mobile--fadeout");
+        navigation.classList.add("navigation__mobile__fadeout");
         setTimeout(() => {
-            navigation.classList.toggle('navigation--mobile');
+            navigation.classList.toggle('navigation__mobile');
         }, 300);
     } else {
-        navigation.classList.remove("navigation--mobile--fadeout");
-        navigation.classList.toggle('navigation--mobile');
+        navigation.classList.remove("navigation__mobile__fadeout");
+        navigation.classList.toggle('navigation__mobile');
     }
-};
-
-// Código relacionado con el carrusel
+}
+// Selecciona el elemento del carrusel
 const carousel = document.getElementById('carousel');
+
+// Variables de estado para el arrastre del mouse
 let isDown = false;
 let startX;
 let scrollLeft;
 
-carousel.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - carousel.offsetLeft;
-    scrollLeft = carousel.scrollLeft;
-    carousel.style.cursor = 'grabbing';
-});
-
+// Manejadores de eventos para el mouse
 carousel.addEventListener('mouseleave', () => {
-    isDown = false;
-    carousel.style.cursor = 'grab';
-});
-
-document.addEventListener('mouseup', () => {
     isDown = false;
     carousel.style.cursor = 'grab';
 });
@@ -55,25 +42,4 @@ document.addEventListener('mousemove', (e) => {
     const x = e.pageX - carousel.offsetLeft;
     const walkX = (x - startX) * 1;
     carousel.scrollLeft = scrollLeft - walkX;
-});
-
-carousel.addEventListener('scroll', () => {
-    const position = carousel.scrollLeft;
-    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-});
-
-scrollLeftButton.addEventListener('click', () => {
-    carousel.scrollBy({
-        top: 0,
-        left: -200,
-        behavior: 'smooth'
-    });
-});
-
-scrollRightButton.addEventListener('click', () => {
-    carousel.scrollBy({
-        top: 0,
-        left: 200,
-        behavior: 'smooth'
-    });
 });
